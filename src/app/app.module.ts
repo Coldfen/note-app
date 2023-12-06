@@ -20,7 +20,7 @@ import { APP_BASE_HREF } from "@angular/common";
     NoteFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
-  providers: [NoteService, { provide: APP_BASE_HREF, useValue: "note-app" }],
+  providers: [NoteService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
