@@ -939,3 +939,4 @@ module.exports = __webpack_require__(/*! /Users/aleksandr/Desktop/Тестовы
 /***/ })
 
 },[[0,"runtime","vendor"]]]);
+//# sourceMappingURL=main-es2015.js.map

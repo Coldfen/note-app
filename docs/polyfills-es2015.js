@@ -6498,3 +6498,4 @@ module.exports = __webpack_require__(/*! /Users/aleksandr/Desktop/Тестовы
 /***/ })
 
 },[[2,"runtime"]]]);
+//# sourceMappingURL=polyfills-es2015.js.map
