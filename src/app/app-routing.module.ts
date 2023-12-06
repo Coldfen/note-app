@@ -16,14 +16,14 @@ const routes: Routes = [
     path: "create",
     component: NoteFormComponent,
   },
-  // {
-  //   path: "**",
-  //   component: NoteCardComponent,
-  // },
+  {
+    path: "**",
+    component: NoteCardComponent,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

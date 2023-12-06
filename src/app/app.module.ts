@@ -9,6 +9,7 @@ import { HeaderComponent } from "./header/header.component";
 import { NoteFormComponent } from "./note-form/note-form.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NoteService } from "./services/note.service";
+import { APP_BASE_HREF } from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -18,13 +19,8 @@ import { NoteService } from "./services/note.service";
     HeaderComponent,
     NoteFormComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-  ],
-  providers: [NoteService],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  providers: [NoteService, { provide: APP_BASE_HREF, useValue: "note-app" }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

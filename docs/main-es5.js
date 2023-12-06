@@ -591,12 +591,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }, {
       path: "create",
       component: _note_form_note_form_component__WEBPACK_IMPORTED_MODULE_4__["NoteFormComponent"]
+    }, {
+      path: "**",
+      component: _note_card_note_card_component__WEBPACK_IMPORTED_MODULE_3__["NoteCardComponent"]
     }];
     var AppRoutingModule = /*#__PURE__*/_createClass(function AppRoutingModule() {
       _classCallCheck(this, AppRoutingModule);
     });
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
-      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
+      imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes, {})],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })], AppRoutingModule);
 
@@ -700,13 +703,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _angular_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
     var _services_note_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__( /*! ./services/note.service */"./src/app/services/note.service.ts");
+    /* harmony import */
+    var _angular_common__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__( /*! @angular/common */"./node_modules/@angular/common/fesm2015/common.js");
     var AppModule = /*#__PURE__*/_createClass(function AppModule() {
       _classCallCheck(this, AppModule);
     });
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
       declarations: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"], _note_card_note_card_component__WEBPACK_IMPORTED_MODULE_5__["NoteCardComponent"], _note_list_menu_note_list_menu_component__WEBPACK_IMPORTED_MODULE_6__["NoteListMenuComponent"], _header_header_component__WEBPACK_IMPORTED_MODULE_7__["HeaderComponent"], _note_form_note_form_component__WEBPACK_IMPORTED_MODULE_8__["NoteFormComponent"]],
       imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"]],
-      providers: [_services_note_service__WEBPACK_IMPORTED_MODULE_10__["NoteService"]],
+      providers: [_services_note_service__WEBPACK_IMPORTED_MODULE_10__["NoteService"], {
+        provide: _angular_common__WEBPACK_IMPORTED_MODULE_11__["APP_BASE_HREF"],
+        useValue: "note-app"
+      }],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })], AppModule);
 
