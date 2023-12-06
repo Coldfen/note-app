@@ -1,0 +1,54 @@
+<form
+  [formGroup]="noteForm"
+  (ngSubmit)="submit()"
+  class="form"
+>
+
+  <h2 class="form-header">Создание заметки</h2>
+
+  <div class="form-control">
+    <label
+      class="form-title"
+      for="title"
+    >Заголовок: </label>
+    <div>
+      <input
+        id="title"
+        type="title"
+        formControlName="title"
+      >
+      <div
+        *ngIf="noteForm.get('title')?.touched && noteForm.get('title')?.invalid"
+        class="validation"
+      >
+        <small *ngIf="noteForm.get('title')?.errors?.required">Введите заголовок</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-control">
+    <label
+      class="form-title"
+      for="descriptions"
+    >Описание: </label>
+    <div>
+      <textarea
+        id="descriptions"
+        type="descriptions"
+        formControlName="descriptions"
+      > </textarea>
+      <div
+        *ngIf="noteForm.get('descriptions')?.touched && noteForm.get('title')?.invalid"
+        class="validation"
+      >
+        <small *ngIf="noteForm.get('descriptions')?.errors?.required">Введите описание</small>
+      </div>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    class="submit-button"
+    [disabled]="noteForm.invalid"
+  >Создать</button>
+</form>

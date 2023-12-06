@@ -1,0 +1,18 @@
+.not-found-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 40vh;
+}
+
+.note-card {
+  overflow: auto;
+  margin: 15px;
+
+  .note-title {
+    color: #b7acfa;
+  }
+
+  .note-description {
+    padding-top: 12px;
+  }
+}

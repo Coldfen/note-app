@@ -1,0 +1,63 @@
+.form {
+  padding: 12px;
+
+  &-control {
+    display: flex;
+    flex-wrap: wrap;
+    color: #888;
+    margin-bottom: 0.8rem;
+
+    div {
+      width: 100%;
+    }
+  }
+
+  &-header {
+    font-size: 28px;
+    text-align: center;
+    margin: 18px 0;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+    padding: 0.4em;
+  }
+
+  .validation {
+    color: #b10012;
+  }
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+  }
+
+  input[type='submit'],
+  button {
+    font: inherit;
+  }
+
+  .submit-button {
+    height: 2.5rem;
+    padding: 0.2rem 1.3rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: .5rem;
+    display: block;
+    width: 100%;
+    background: #7765eb;
+    color: #fff;
+
+    &:disabled {
+      cursor: not-allowed;
+      background: #f4f4f4;
+      color: #111;
+    }
+  }
+}

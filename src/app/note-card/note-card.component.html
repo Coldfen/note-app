@@ -1,0 +1,14 @@
+<div
+  class="note-card"
+  *ngIf="(noteData | async); else notFoundNote"
+>
+  <h2 class="note-title">{{ (noteData | async).title }}</h2>
+
+  <p class="note-description">
+    {{ (noteData | async).descriptions }}
+  </p>
+</div>
+
+<ng-template #notFoundNote>
+  <p class="not-found-title">Заметка с id {{ noteId }} - не найдена :(</p>
+</ng-template>

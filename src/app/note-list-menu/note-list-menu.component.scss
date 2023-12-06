@@ -1,0 +1,64 @@
+.menu-wrapper {
+  border-right: 2px solid black;
+  height: 91.5vh;
+  background-color: #edebeb;
+}
+
+.add-button-wrapper {
+  padding: 7px;
+}
+
+.add-button {
+  box-shadow: -2px 3px 8px 3px rgba(34, 60, 80, 0.2);
+  color: #fff;
+  background-color: #a699f7;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+  padding-left: 8px;
+  height: 40px;
+  width: 100%;
+  font-weight: 600;
+  min-width: 200px;
+  border: none;
+  border-radius: 0.5rem;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.note-list {
+  height: 85vh;
+  overflow: auto;
+}
+
+.note-item {
+  padding: 0 8px 8px;
+
+  &-link {
+    box-shadow: -2px 3px 8px -4px rgba(34, 60, 80, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+    padding-left: 8px;
+    height: 40px;
+    width: 100%;
+    font-weight: 600;
+    min-width: 200px;
+    background-color: #fff;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.note-item:first-of-type {
+  padding-top: 8px;
+}
+
+.note-item-link__active {
+  background-color: #7765eb;
+  color: #fff;
+}

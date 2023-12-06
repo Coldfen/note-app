@@ -1,0 +1,27 @@
+<div class="menu-wrapper">
+
+  <div class="add-button-wrapper">
+    <a
+      class="add-button"
+      routerLink="create"
+      routerLinkActive="note-item-link__active"
+    >
+      + Добавить
+    </a>
+  </div>
+
+  <ul class="note-list">
+    <li
+      *ngFor="let note of notes"
+      class="note-item"
+    >
+      <a
+        class="note-item-link"
+        [routerLink]="['note', note.id]"
+        routerLinkActive="note-item-link__active"
+      >
+        {{ note.title }}
+      </a>
+    </li>
+  </ul>
+</div>

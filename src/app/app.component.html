@@ -1,0 +1,9 @@
+<app-header></app-header>
+<main class="content">
+  <div class="menu-wrapper">
+    <app-note-list-menu [notes]="(noteService.notes$ | async)"></app-note-list-menu>
+  </div>
+  <div class="route-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</main>
