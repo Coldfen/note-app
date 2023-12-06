@@ -19,8 +19,11 @@
         class="note-item-link"
         [routerLink]="['note', note.id]"
         routerLinkActive="note-item-link__active"
+        [title]="note.title"
       >
-        {{ note.title }}
+        <span class="link-text">
+          {{ note.title }}
+        </span>
       </a>
     </li>
   </ul>

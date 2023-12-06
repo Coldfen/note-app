@@ -2,8 +2,8 @@ import { Injectable, NgZone } from "@angular/core";
 import { BehaviorSubject, Observable } from "rxjs";
 import { getNotes } from "./note.helper";
 import { Note } from "../types/note.types";
-import { map } from "rxjs/operators";
-import { Router } from "@angular/router";
+import { filter, map } from "rxjs/operators";
+import { ActivatedRoute, NavigationEnd, Params, Router } from "@angular/router";
 
 @Injectable()
 export class NoteService {
@@ -35,15 +35,17 @@ export class NoteService {
     );
   }
 
-  public initNote(): void {
+  public initNote(noteId: string | null): void {
     const notes = getNotes();
 
-    if (notes) {
+    if (!noteId && notes) {
       this.ngZone.run(() => this.router.navigate(["note", notes[0].id]));
 
       return;
-    }
+    } else if (!notes) {
+      this.ngZone.run(() => this.router.navigate(["create"]));
 
-    this.ngZone.run(() => this.router.navigate(["create"]));
+      return;
+    }
   }
 }

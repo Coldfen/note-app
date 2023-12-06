@@ -7,10 +7,6 @@ import { NoteService } from "./services/note.service";
   styleUrls: ["./app.component.scss"],
   providers: [NoteService],
 })
-export class AppComponent implements OnInit {
-  constructor(public readonly noteService: NoteService) { }
-
-  public ngOnInit(): void {
-    this.noteService.initNote()
-  }
+export class AppComponent {
+  constructor(public readonly noteService: NoteService) {}
 }

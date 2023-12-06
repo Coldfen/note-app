@@ -51,6 +51,13 @@
     background-color: #fff;
     text-decoration: none;
     color: black;
+    max-width: 250px;
+
+    .link-text {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 }
 

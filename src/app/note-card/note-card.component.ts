@@ -25,6 +25,8 @@ export class NoteCardComponent implements OnInit, OnDestroy {
   }
 
   public ngOnInit(): void {
+    this.noteService.initNote(this.noteId);
+
     this.route.paramMap.pipe(takeUntil(this.unsubscriber$)).subscribe(() => {
       if (this.noteId) {
         this.noteData = this.noteService.getNoteById(this.noteId);
